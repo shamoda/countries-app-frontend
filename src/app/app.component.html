@@ -1,5 +1,51 @@
-<div *ngFor="let country of countries" >
-  <div> {{country.name}} </div>
+<mat-toolbar class="navbar" color="primary">
+  <span class="app-name">Countries App</span>
+</mat-toolbar>
+
+<div class="sub-nav">
+  <span><button mat-raised-button color="primary" >Add Country</button></span>
+
+  <span>
+    <mat-form-field class="example-form-field">
+      <mat-label>Search Country</mat-label>
+      <input matInput type="text" >
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </span>
+
 </div>
 
-<router-outlet></router-outlet>
+<div class="c-table">
+  <table>
+    <tr>
+      <th>Country ID</th>
+      <th>Country</th>
+      <th>President</th>
+      <th>Capital</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Sri Lanka</td>
+      <td>Gota</td>
+      <td>Colombo</td>
+      <td>
+        <button mat-raised-button color="primary">update</button>
+        <button mat-raised-button color="warn">delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Sri Lanka</td>
+      <td>Gota</td>
+      <td>Colombo</td>
+      <td>
+        <button mat-raised-button color="primary">update</button>
+        <button mat-raised-button color="warn">delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
