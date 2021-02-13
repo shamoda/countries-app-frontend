@@ -26,5 +26,4 @@ Back-end: https://github.com/shamoda/countries-app-backend
 | ![image one](/src/assets/deleteAll.png) | ![image one](/src/assets/search.png) |
 | -------------- | -------------- |
 
-| ![image one](/src/assets/noResults.png) |
-| -------------- | -------------- |
+![image one](/src/assets/noResults.png) 
