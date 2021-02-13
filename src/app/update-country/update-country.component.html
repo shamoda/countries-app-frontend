@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Update Country Details</h2>
+<form #editForm="ngForm">
+  <mat-dialog-content class="mat-typography">
+      <mat-form-field class="form-field">
+        <mat-label>Country Name</mat-label>
+        <input matInput ngModel="{{country?.name}}" name="name" type="text" required>
+      </mat-form-field><br/>
+      <mat-form-field class="form-field">
+        <mat-label>President</mat-label>
+        <input matInput ngModel="{{country?.president}}" name="president" type="text" required>
+      </mat-form-field><br/>
+      <mat-form-field class="form-field">
+        <mat-label>Capital</mat-label>
+        <input matInput ngModel="{{country?.capital}}" name="capital" type="text" required>
+      </mat-form-field><br/>
+      <mat-form-field  class="form-field id-input">
+        <mat-label>Id</mat-label>
+        <input matInput ngModel="{{country?.id}}" name="id"  required>
+      </mat-form-field>
+
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true" mat-dialog-close>Cancel</button>
+    <button (click)="onUpdateCountry(editForm.value)" mat-raised-button [mat-dialog-close]="true" type="submit" color="primary" cdkFocusInitial>Update</button>
+  </mat-dialog-actions>
+</form>

@@ -2,38 +2,48 @@
   <span class="app-name">Countries App</span>
 </mat-toolbar>
 
-<div class="sub-nav">
-  <span><button mat-raised-button color="primary" ><mat-icon>add</mat-icon> Add Country</button></span>
-  <span>
-    <mat-form-field class="example-form-field">
-      <mat-label>Search Country</mat-label>
-      <input matInput type="text" >
-      <button mat-button matSuffix mat-icon-button aria-label="Clear" >
-        <mat-icon>search</mat-icon>
-      </button>
-    </mat-form-field>
-  </span>
+<div id="main-container">
+  <div class="sub-nav">
+    <span><button mat-raised-button color="primary" (click)="addCountry()" ><mat-icon>add</mat-icon> Add Country</button></span>
+    <span>
+      <form>
+        <mat-form-field class="example-form-field">
+          <mat-label>Search Country</mat-label>
+          <input (ngModelChange)="searchCountry(key.value)" #key="ngModel" ngModel name="key" matInput type="text" >
+          <button mat-button matSuffix mat-icon-button aria-label="Clear" >
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+      </form>
+    </span>
+  </div>
+
+  <div class="c-table" *ngIf="countries?.length != 0">
+    <table>
+      <tr>
+        <th>Country ID</th>
+        <th>Country</th>
+        <th>President</th>
+        <th>Capital</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let country of countries">
+        <td> {{country.id}} </td>
+        <td> {{country.name}} </td>
+        <td> {{country.president}} </td>
+        <td> {{country.capital}} </td>
+        <td>
+          <button mat-button color="primary" (click)="updateCountry(country)" ><mat-icon>update</mat-icon> Update</button>
+          <button mat-button color="warn" (click)="deleteCountry(country)" > <mat-icon>delete</mat-icon> Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
 
-<div class="c-table">
-  <table>
-    <tr>
-      <th>Country ID</th>
-      <th>Country</th>
-      <th>President</th>
-      <th>Capital</th>
-      <th>Action</th>
-    </tr>
-    <tr *ngFor="let country of countries">
-      <td> {{country.id}} </td>
-      <td> {{country.name}} </td>
-      <td> {{country.president}} </td>
-      <td> {{country.capital}} </td>
-      <td>
-        <button mat-button color="primary"><mat-icon>update</mat-icon> Update</button>
-        <button mat-button color="warn"> <mat-icon>delete</mat-icon> Delete</button>
-      </td>
-    </tr>
-  </table>
+
+<div *ngIf="countries?.length == 0" class="no-results">
+  <h3>No Results Found!</h3>
 </div>
+
 

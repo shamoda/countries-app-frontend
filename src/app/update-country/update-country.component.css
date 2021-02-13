@@ -1,0 +1,10 @@
+.form-field {
+  width: 400px;
+}
+
+.id-input {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}

@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Add Country Details</h2>
+<form #addForm="ngForm" (ngSubmit)="onAddCountry(addForm)">
+  <mat-dialog-content class="mat-typography">
+      <mat-form-field class="form-field">
+        <mat-label>Country Name</mat-label>
+        <input ngModel name="name" matInput type="text" required>
+      </mat-form-field><br/>
+      <mat-form-field class="form-field">
+        <mat-label>President</mat-label>
+        <input ngModel name="president" matInput type="text" required>
+      </mat-form-field><br/>
+      <mat-form-field class="form-field">
+        <mat-label>Capital</mat-label>
+        <input ngModel name="capital" matInput type="text" required>
+      </mat-form-field>
+
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true" mat-dialog-close>Cancel</button>
+    <button [disabled]="addForm.invalid" mat-raised-button [mat-dialog-close]="true" type="submit" color="primary" cdkFocusInitial>Save</button>
+  </mat-dialog-actions>
+</form>
