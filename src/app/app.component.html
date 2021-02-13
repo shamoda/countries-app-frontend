@@ -26,21 +26,11 @@
       <th>Capital</th>
       <th>Action</th>
     </tr>
-    <tr>
-      <td>1</td>
-      <td>Sri Lanka</td>
-      <td>Gota</td>
-      <td>Colombo</td>
-      <td>
-        <button mat-raised-button color="primary">update</button>
-        <button mat-raised-button color="warn">delete</button>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Sri Lanka</td>
-      <td>Gota</td>
-      <td>Colombo</td>
+    <tr *ngFor="let country of countries">
+      <td> {{country.id}} </td>
+      <td> {{country.name}} </td>
+      <td> {{country.president}} </td>
+      <td> {{country.capital}} </td>
       <td>
         <button mat-raised-button color="primary">update</button>
         <button mat-raised-button color="warn">delete</button>
