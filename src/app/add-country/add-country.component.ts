@@ -13,14 +13,16 @@ import { CountryService } from '../country.service';
 })
 export class AddCountryComponent implements OnInit {
 
+  // class variables
   country: Country;
   appComponent: AppComponent;
 
-
+  // injecting country services class
   constructor(private countryService: CountryService) {}
 
   ngOnInit(): void {  }
 
+  // retrieving form data and pass data to backend via service class 
   onAddCountry(addForm: NgForm): void {
     this.countryService.addCountry(addForm.value).subscribe(
       (response: Country) => {

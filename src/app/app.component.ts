@@ -38,6 +38,7 @@ export class AppComponent implements OnInit {
     );
   }
 
+  // listening to onclick event of add country button
   addCountry() {
     const dialogRef = this.dialog.open(AddCountryComponent);
     dialogRef.afterClosed().subscribe(result => {
@@ -45,6 +46,7 @@ export class AppComponent implements OnInit {
     });
   }
 
+   // listening to onclick event of update country button
   updateCountry(countryData) {
     const dialogRef = this.dialog.open(UpdateCountryComponent, {
       data: { country: countryData }
@@ -54,6 +56,7 @@ export class AppComponent implements OnInit {
     });
   }
 
+   // listening to onclick event of delete country button
   deleteCountry(countryData: Country) {
     const dialogRef = this.dialog.open(DeleteCountryComponent, {
       data: { country: countryData }
@@ -63,39 +66,24 @@ export class AppComponent implements OnInit {
     });
   }
 
+  // search function
   public searchCountry(key: string): void {
     const results: Country[] = [];
+    // iterating through all the available countries
     for (const country of this.countries) {
+      // checking whether name, president or capital has the same charactor sequence as the key
       if (country.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
       || country.president.toLowerCase().indexOf(key.toLowerCase()) !== -1
       || country.capital.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
         results.push(country);
       }
     }
+    // assigning filtered results to the class variable
     this.countries = results;
+    // if there is no any results all the countries will be displayed 
     if (results.length === 0 || !key) {
       this.getCountries();
     }
   }
-
-  // public openDialog(country: Country, mode: string): void {
-  //   const container = document.getElementById('main-container');
-  //   const button = document.createElement('button');
-  //   button.type = 'button';
-  //   button.style.display = 'none';
-  //   button.setAttribute('data-toggle', 'modal');
-  //   if(mode == 'add') {
-  //     button.setAttribute('data-target', '#addCountry');
-  //   }
-  //   if(mode == 'edit') {
-  //     button.setAttribute('data-target', '#editCountry');
-  //   }
-  //   if(mode == 'delete') {
-  //     button.setAttribute('data-target', '#deleteCountry');
-  //   }
-  //   container.appendChild(button);
-  //   button.click();
-  // }
-
 
 }

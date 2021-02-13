@@ -8,7 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 
 
-
+// adding all material modules into an array
 const MaterialComponents = [
   MatButtonModule,
   MatToolbarModule,
@@ -19,6 +19,7 @@ const MaterialComponents = [
   MatDialogModule
 ]
 
+// assigning array to import and export array 
 @NgModule({
   imports: [ MaterialComponents ],
   exports: [ MaterialComponents ]
