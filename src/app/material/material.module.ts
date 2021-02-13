@@ -5,6 +5,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 const MaterialComponents = [
@@ -13,7 +15,8 @@ const MaterialComponents = [
   MatIconModule,
   MatFormFieldModule,
   MatTableModule,
-  MatInputModule
+  MatInputModule,
+  MatDialogModule
 ]
 
 @NgModule({
