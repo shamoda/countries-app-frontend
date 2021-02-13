@@ -10,13 +10,15 @@ import { FormsModule } from '@angular/forms';
 import { AddCountryComponent } from './add-country/add-country.component';
 import { UpdateCountryComponent } from './update-country/update-country.component';
 import { DeleteCountryComponent } from './delete-country/delete-country.component';
+import { DeleteAllCountriesComponent } from './delete-all-countries/delete-all-countries.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCountryComponent,
     UpdateCountryComponent,
-    DeleteCountryComponent
+    DeleteCountryComponent,
+    DeleteAllCountriesComponent
   ],
   imports: [
     BrowserModule,

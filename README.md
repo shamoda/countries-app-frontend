@@ -1,27 +1,30 @@
-# CountriesappFrontend
+# Pearson Practical Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+This project was created as the solution for the Practical Test of Pearson Lanka.
 
-## Development server
+#### This front-end was created using Angular and Angular Material UI.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### To run this application in your machine
 
-## Code scaffolding
+1. Clone this repository.
+2. cd into the project folder.
+3. Run `npm install` to install node modules
+4. Run  `ng serve -o` to open in web browser. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### This application is based on spring boot back-end 
 
-## Build
+Back-end: https://github.com/shamoda/countries-app-backend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Here are some snapshots of the running application
 
-## Running unit tests
+| ![image one](/src/assets/data.png) | ![image one](/src/assets/add.png) |
+| -------------- | -------------- |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| ![image one](/src/assets/update.png) | ![image one](/src/assets/delete.png) |
+| -------------- | -------------- |
 
-## Running end-to-end tests
+| ![image one](/src/assets/deleteAll.png) | ![image one](/src/assets/search.png) |
+| -------------- | -------------- |
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| ![image one](/src/assets/noResults.png) |
+| -------------- | -------------- |

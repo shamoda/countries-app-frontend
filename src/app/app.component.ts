@@ -6,6 +6,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { AddCountryComponent } from './add-country/add-country.component';
 import { UpdateCountryComponent } from './update-country/update-country.component';
 import { DeleteCountryComponent } from './delete-country/delete-country.component';
+import { DeleteAllCountriesComponent } from './delete-all-countries/delete-all-countries.component';
 
 
 @Component({
@@ -80,10 +81,18 @@ export class AppComponent implements OnInit {
     }
     // assigning filtered results to the class variable
     this.countries = results;
-    // if there is no any results all the countries will be displayed 
+    // if there is no any results all the countries will be displayed
     if (results.length === 0 || !key) {
       this.getCountries();
     }
   }
+
+    // listening to onclick event of delete all button
+    deleteAllCountry() {
+      const dialogRef = this.dialog.open(DeleteAllCountriesComponent);
+      dialogRef.afterClosed().subscribe(result => {
+        this.getCountries();
+      });
+    }
 
 }

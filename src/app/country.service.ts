@@ -30,9 +30,14 @@ export class CountryService {
     return this.http.put<Country>(`${this.baseApi}/rest/v2/update`, country);
   }
 
-  // send delete request to delete a country record 
+  // send delete request to delete a country record
   public deleteCountry(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseApi}/rest/v2/delete/${id}`);
   }
+
+    // send delete request to delete all the country records
+    public deleteAllCountries(): Observable<void> {
+      return this.http.delete<void>(`${this.baseApi}/rest/v2/deleteall`);
+    }
 
 }

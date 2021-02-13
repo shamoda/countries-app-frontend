@@ -46,6 +46,11 @@
   </div>
 </div>
 
+<!-- delete all button  -->
+<div class="sub-nav" *ngIf="countries?.length !== 0">
+  <button (click)="deleteAllCountry()" mat-button color="warn"><mat-icon>delete</mat-icon> Delete All Records</button>
+</div>
+
 <!-- when there is there is no country related data, this alert banner will displayed -->
 <div *ngIf="countries?.length == 0" class="no-results">
   <h3>No Results Found!</h3>
