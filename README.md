@@ -2,6 +2,8 @@
 
 This project was created as the solution for the Practical Test of Pearson Lanka.
 
+### Hosted URL : https://zealous-northcutt-bb6fda.netlify.app/
+
 #### This front-end was created using Angular and Angular Material UI.
 
 ### To run this application in your machine
